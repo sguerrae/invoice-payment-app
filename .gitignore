@@ -1,0 +1,32 @@
+# Dependencias
+/node_modules
+/.pnp
+.pnp.js
+
+# Archivos generados durante el desarrollo
+/coverage
+/build
+/dist
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de IDE y editores
+/.idea
+/.vscode
+*.swp
+*.swo
+
+# Archivos de build de Vite
+/frontend/dist
+/frontend/.vite
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
