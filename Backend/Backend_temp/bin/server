@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require_relative '../config/application'
+require 'rails/commands/server'
+require 'rack/handler/puma'
+
+module Rails
+  class Server
+    def default_options
+      super.merge(
+        Port: ENV.fetch('PORT', 3000).to_i,
+        Host: '0.0.0.0',
+        environment: ENV.fetch('RAILS_ENV', ENV.fetch('RACK_ENV', 'development')),
+        daemonize: false,
+        pid: File.expand_path('tmp/pids/server.pid')
+      )
+    end
+  end
+end
+
+Rails.application.load_server

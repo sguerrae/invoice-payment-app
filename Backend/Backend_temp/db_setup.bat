@@ -1,0 +1,6 @@
+@echo off
+echo Creando base de datos...
+createdb -U postgres backend_development
+echo Aplicando esquema...
+psql -U postgres -d backend_development -f db\schema\schema.sql
+echo Migración completa!
